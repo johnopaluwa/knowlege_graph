@@ -1,0 +1,32 @@
+# Gitignore file for the_knowlege_graph project
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Production
+/build
+/dist
+
+# Miscellaneous
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# Neo4j generated files
+neo4j/
+
+
+/arxiv_dataset/pdf
+/arxiv_dataset/arxiv-metadata-oai-snapshot.json
