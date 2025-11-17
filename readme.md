@@ -88,6 +88,40 @@ python script.py
 
 This script will read the downloaded PDF files, extract information using the configured LLM, and store it in your Neo4j database. By default, it processes a limited number of papers (`PROCESSING_LIMIT` in `script.py`) for efficiency during development.
 
+### 5. Running the Frontend and Backend for Hidden Connections
+
+To explore the "hidden connections" (causal chains, shared effects) through a simple React frontend:
+
+1.  **Install API Dependencies**:
+
+    ```bash
+    pip install -r api_requirements.txt
+    ```
+
+2.  **Start the Flask API Backend**:
+
+    - Open a new terminal in the project's root directory.
+    - Run:
+      ```bash
+      python api.py
+      ```
+    - The API will start on `http://127.0.0.1:5000`. Keep this terminal open.
+
+3.  **Start the React Frontend**:
+
+    - Open a separate new terminal.
+    - Navigate into the `frontend_app` directory:
+      ```bash
+      cd frontend_app
+      ```
+    - Start the React development server:
+      ```bash
+      npm start
+      ```
+    - This will open the application in your web browser (usually `http://localhost:3000`).
+
+    The React app will fetch data from your running Flask API to display the extracted causal chains and shared effects from your Neo4j knowledge graph.
+
 ## Exploring the Knowledge Graph
 
 After `script.py` completes, you can access the Neo4j Browser at `http://localhost:7474`. Log in with `neo4j`/`password` and explore your knowledge graph using Cypher queries.

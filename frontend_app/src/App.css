@@ -1,0 +1,100 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-bottom: 20px;
+}
+
+.Loading-Screen,
+.Error-Screen {
+  font-size: 1.5rem;
+  margin-top: 50px;
+  color: #61dafb;
+}
+
+.Error-Screen {
+  color: Tomato;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.Connections-Section {
+  background-color: #383c4a;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Connections-Section h2 {
+  color: #61dafb;
+  margin-bottom: 20px;
+}
+
+.Connection-List {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.Connection-Card {
+  background-color: #444a59;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: left;
+  word-wrap: break-word;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.Connection-Card h3 {
+  color: #90ee90; /* LightGreen */
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.Connection-Card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.Connection-Card strong {
+  color: #ffcc00; /* Amber */
+}
+
+.Explanation {
+  font-style: italic;
+  color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-left: 3px solid #61dafb;
+  padding-left: 10px;
+}
+
+.No-Data {
+  color: #f0f0f0;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
