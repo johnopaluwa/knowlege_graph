@@ -1,100 +1,135 @@
+/* General Body and HTML Styling */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5; /* Light grey background for the whole page */
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* App Container */
 .App {
   text-align: center;
-  font-family: Arial, sans-serif;
-  background-color: #282c34;
-  color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
-.App-header {
+/* Header Styling - Removed from App.js, but keeping here if needed */
+/* .App-header {
   background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
   color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #61dafb;
+} */
+
+/* Main Content Area */
+main {
+  flex-grow: 1; /* Allows main content to expand and fill available space */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Home Content Specific Styling */
+.home-container {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  text-align: center;
+}
+
+.home-container h2 {
+  color: #282c34;
+  font-size: 2.2rem;
   margin-bottom: 20px;
 }
 
+.home-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.home-container .hint {
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+/* General Link Styling (if any outside navbar) */
+a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Utility Classes for messages/loaders */
 .Loading-Screen,
 .Error-Screen {
   font-size: 1.5rem;
-  margin-top: 50px;
-  color: #61dafb;
+  padding: 50px;
+  text-align: center;
+  color: #333;
 }
 
 .Error-Screen {
-  color: Tomato;
-}
-
-main {
-  width: 100%;
-  max-width: 1200px;
-}
-
-.Connections-Section {
-  background-color: #383c4a;
-  margin-bottom: 30px;
-  padding: 20px;
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px;
 }
 
-.Connections-Section h2 {
-  color: #61dafb;
-  margin-bottom: 20px;
-}
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+  }
 
-.Connection-List {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  justify-content: center;
-}
+  .nav-menu {
+    margin-top: 15px;
+  }
 
-.Connection-Card {
-  background-color: #444a59;
-  padding: 15px;
-  border-radius: 5px;
-  text-align: left;
-  word-wrap: break-word;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
+  .nav-item {
+    margin: 0 10px;
+  }
 
-.Connection-Card h3 {
-  color: #90ee90; /* LightGreen */
-  margin-top: 0;
-  margin-bottom: 10px;
-}
+  .home-container {
+    margin-top: 30px;
+    padding: 30px 15px;
+  }
 
-.Connection-Card p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  margin-bottom: 5px;
-}
+  .home-container h2 {
+    font-size: 1.8rem;
+  }
 
-.Connection-Card strong {
-  color: #ffcc00; /* Amber */
-}
-
-.Explanation {
-  font-style: italic;
-  color: #ccc;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  border-left: 3px solid #61dafb;
-  padding-left: 10px;
-}
-
-.No-Data {
-  color: #f0f0f0;
-  font-size: 1.1rem;
-  margin-top: 20px;
+  .page-container {
+    padding: 15px;
+    margin: 15px auto;
+  }
 }
