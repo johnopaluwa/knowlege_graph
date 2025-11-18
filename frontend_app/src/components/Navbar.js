@@ -27,6 +27,15 @@ const Navbar = () => {
               Causal Chains
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink
+              to="/graph-view"
+              className="nav-links"
+              activeClassName="active"
+            >
+              Graph View
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>

@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css"; // Overall application styling
 import Navbar from "./components/Navbar";
 import CausalChainsPage from "./pages/CausalChainsPage";
+import GraphVisualizationPage from "./pages/GraphVisualizationPage"; // New import
 import SharedEffectsPage from "./pages/SharedEffectsPage";
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/shared-effects" element={<SharedEffectsPage />} />
+          <Route path="/graph-view" element={<GraphVisualizationPage />} />{" "}
+          {/* New Route */}
           <Route path="/causal-chains" element={<CausalChainsPage />} />
           {/* Default route for the homepage, can be a dashboard or redirect */}
           <Route path="/" element={<HomeContent />} />
